@@ -27,5 +27,5 @@ class LatinGen(secretString: String) extends SecretAlphabet {
     b5ToDec.map(latinAlphabet(_)).mkString
   }
 
-  def getLatin(s: String): String = decToLatin
+  def getLatin: String = decToLatin
 }

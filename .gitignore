@@ -5,5 +5,3 @@
 .DS_Store
 *.sc
 SecretString.scala
-
-NameIdentify.scala
