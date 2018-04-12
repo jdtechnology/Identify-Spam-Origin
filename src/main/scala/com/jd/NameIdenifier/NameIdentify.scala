@@ -11,12 +11,23 @@ object NameIdentify {
     } else println("You have entered an invalid option!")
   }
 
+  /**
+    * Polls for user information
+    * Instantiates a class and calls its public method
+    * @return a secret word hidden in user input string
+    */
   def generateSecret: String = {
     val wordToCrypt = scala.io.StdIn.readLine("What secret word would you like to use (A-Y) only: ")
     val cBuild = new SecretGen(wordToCrypt)
     val name = scala.io.StdIn.readLine("What is your first name: ")
     cBuild.getEmbeddedSecret(name)
   }
+
+  /**
+    * Polls for user information
+    * Instantiates a class and calls its public method
+    * @return the secret word hidden in user input
+    */
   def backToLatin: String = {
     val pToDcrypt = scala.io.StdIn.readLine("What is the word that contains the secret?: ")
     val cBuild = new LatinGen(pToDcrypt)

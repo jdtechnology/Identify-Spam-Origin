@@ -1,5 +1,9 @@
 package com.jd.NameIdenifier
 
+/**
+  * @constructor Instantiate to hide the param in a word
+  * @param latin the word to be hidden
+  */
 class SecretGen(latin: String) extends SecretAlphabet {
   private val splitString: Array[Char] = latin.toUpperCase.toArray
 
