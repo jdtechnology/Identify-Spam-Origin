@@ -1,6 +1,7 @@
 # Identify Spam origin (NameIdentify)
 This is a simple project to insert a traceable snip of text into 
 the name you give a website.
+[Documentation](https://jdtechnology.github.io/Identify-Spam-Origin/com/jd/nameidentify/index.html "github pages")
 
 ## Running
 1. Clone the repository to your local machine with `git clone`
