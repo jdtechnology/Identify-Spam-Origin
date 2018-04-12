@@ -3,7 +3,7 @@ package com.jd.NameIdenifier
 import scala.collection.immutable
 
 class LatinGen(secretString: String) extends SecretAlphabet {
-  private val stripWord = secretString.drop(1).filter(privAlphabet.contains(_))
+  private val stripWord = secretString.filter(privAlphabet.contains(_))
 
   private def secretToB5: Array[immutable.IndexedSeq[Int]] = {
     stripWord.map{x =>

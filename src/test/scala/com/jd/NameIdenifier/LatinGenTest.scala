@@ -31,4 +31,12 @@ class LatinGenTest extends WordSpec with Matchers with PrivateMethodTester {
       testData invokePrivate decToLatin() shouldBe "GOOGLE"
     }
   }
+  "LatinGen(Jack).getLatin" should {
+    "Provide a publicly available (not subject to change) interface for .decToLatin" in {
+      testData.getLatin shouldBe a [String]
+    }
+    "Only contain characters A-Y" in {
+      testData.getLatin should fullyMatch regex "[A-Y]*".r
+    }
+  }
 }
