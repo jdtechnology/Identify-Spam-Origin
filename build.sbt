@@ -11,3 +11,7 @@ coverageEnabled := true
 coverageMinimum := 83
 
 coverageFailOnMinimum := true
+
+mainClass in assembly := Some("com.jd.nameidentify.NameIdentify")
+
+assemblyJarName in assembly := "nameidentify.jar"

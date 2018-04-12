@@ -1,12 +1,13 @@
 # Identify Spam origin (NameIdentify)
 This is a simple project to insert a traceable snip of text into 
 the name you give a website.
+
 [Documentation](https://jdtechnology.github.io/Identify-Spam-Origin/com/jd/nameidentify/index.html "github pages")
 
 ## Running
 1. Clone the repository to your local machine with `git clone`
 2. `cd` into the directory
-3. Using _sbt_ run using `sbt run`
+3. Run the shell script using `./run.sh`
 4. Follow the command line prompts
 
 _nb: The command line migh show extra spacing, but it wont show outside the command line_
