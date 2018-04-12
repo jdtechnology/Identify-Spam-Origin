@@ -1,4 +1,4 @@
-package com.jd.NameIdenifier
+package com.jd.nameidentify
 
 /**
   * @constructor Instantiate to hide the param in a word

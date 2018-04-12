@@ -1,4 +1,4 @@
-package com.jd.NameIdenifier
+package com.jd.nameidentify
 
 import org.scalatest.{WordSpec, Matchers, PrivateMethodTester}
 

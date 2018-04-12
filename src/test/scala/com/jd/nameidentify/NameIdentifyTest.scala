@@ -1,4 +1,4 @@
-package com.jd.NameIdenifier
+package com.jd.nameidentify
 
 import java.io.{ByteArrayInputStream, InputStream}
 import java.nio.charset.StandardCharsets

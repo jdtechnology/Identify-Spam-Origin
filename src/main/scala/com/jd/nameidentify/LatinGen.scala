@@ -1,4 +1,4 @@
-package com.jd.NameIdenifier
+package com.jd.nameidentify
 
 import scala.collection.immutable
 
