@@ -3,12 +3,18 @@ package com.jd.nameidentify
 object NameIdentify {
 
   def main(args: Array[String]): Unit = {
-    val optionInput = scala.io.StdIn.readLine("Select either\n1. New Embedded Secret\n2.Retrieve a secret\n", Int).toInt
-    if(optionInput == 1) {
-      println(s"Your secret is in: %s".format(generateSecret))
-    } else if (optionInput == 2) {
-      println(s"Your secret word was: %s".format(backToLatin))
-    } else println("You have entered an invalid option!")
+
+    val optionInput =
+      try {
+        scala.io.StdIn.readLine("Select either\n1. New Embedded Secret\n2.Retrieve a secret\n", Int).toInt
+      } catch {
+        case e: Exception => 0
+      }
+      if (optionInput == 1) {
+        println(s"Your secret is in: %s".format(generateSecret))
+      } else if (optionInput == 2) {
+        println(s"Your secret word was: %s".format(backToLatin))
+      } else println("You have entered an invalid option!")
   }
 
   /**
@@ -29,7 +35,7 @@ object NameIdentify {
     * @return the secret word hidden in user input
     */
   def backToLatin: String = {
-    val pToDcrypt = scala.io.StdIn.readLine("What is the word that contains the secret?: ")
+    val pToDcrypt = scala.io.StdIn.readLine("What is the word that contains the secret? ")
     val cBuild = new LatinGen(pToDcrypt)
     cBuild.getLatin
   }

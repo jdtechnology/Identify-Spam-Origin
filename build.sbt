@@ -1,6 +1,6 @@
 name := "NameIdentify"
 
-version := "0.2.0"
+version := "0.2.01"
 
 scalaVersion := "2.12.5"
 
