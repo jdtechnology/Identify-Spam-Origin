@@ -15,7 +15,7 @@ class LatinGen(secretString: String) extends SecretAlphabet {
     * @return Nested Array of Base 5 numbers
     */
   private def secretToB5: Array[immutable.IndexedSeq[Int]] = {
-    stripWord.map{x =>
+    stripWord.map{ x =>
       privAlphabet.indexOf(x)
     }.grouped(2).toArray
   }
@@ -25,9 +25,11 @@ class LatinGen(secretString: String) extends SecretAlphabet {
     * @return Array of our base 5 to base 10 numbers represented as part of the latin alphabet
     */
   private def b5ToDec: Array[Integer] = {
-    secretToB5.map {x =>
-      if(!x.contains(5)) Integer.valueOf(x.mkString, 5)
-      else Integer.valueOf(x.mkString.apply(0).toString, 5)
+    secretToB5.map { x =>
+      x.contains(5) match {
+        case true => Integer.valueOf(x.mkString.apply(0).toString, 5)
+        case _ => Integer.valueOf(x.mkString, 5)
+      }
     }
   }
 

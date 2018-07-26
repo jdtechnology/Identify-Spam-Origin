@@ -23,8 +23,10 @@ class SecretGen(latin: String) extends SecretAlphabet {
     */
   private def toInvisiString: Array[(Char,Char)] = {
     convertToB5(splitString).map { x =>
-      if(x.length > 1) (privAlphabet(x.toArray.head.asDigit), privAlphabet(x.toArray.apply(1).asDigit))
-      else (privAlphabet(x.toArray.head.asDigit), privAlphabet(5))
+      x.length compare 1 match {
+        case 1 => (privAlphabet(x.toArray.head.asDigit), privAlphabet(x.toArray.apply(1).asDigit))
+        case _ => (privAlphabet(x.toArray.head.asDigit), privAlphabet(5))
+      }
     }
   }
 

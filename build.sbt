@@ -8,7 +8,7 @@ libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.4" % Test
 
 coverageEnabled := true
 
-coverageMinimum := 83
+coverageMinimum := 80
 
 coverageFailOnMinimum := true
 
